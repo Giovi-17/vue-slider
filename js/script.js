@@ -7,6 +7,8 @@ const app = new Vue(
         data: {
 
             counterActiveImg: 0,
+
+            counterClock: null,
             
             slides: [
 
@@ -82,11 +84,17 @@ const app = new Vue(
 
             cronoAdd: function() {
 
-                setInterval(() => {
+                this.counterClock = setInterval(() => {
 
                     this.buttonNext();
 
                 }, 3000);
+
+            },
+
+            cronoStop: function() {
+
+                clearInterval(this.counterClock);
 
             },
 
