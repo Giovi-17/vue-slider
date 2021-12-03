@@ -35,7 +35,7 @@
     
                 <div class="small-img">
     
-                    <img v-for="(element, index) in slides" :class="{ active: index === counterActiveImg }" :src="element.items" alt="Img 1">
+                    <img @click="zoomImg(index)" v-for="(element, index) in slides" :class="{ active: index === counterActiveImg }" :src="element.items" alt="Img 1">
     
                     <div @click="buttonLast" class="button top"><i class="fas fa-arrow-up"></i></div>
                     <div @click="buttonNext" class="button bottom"><i class="fas fa-arrow-down"></i></div>

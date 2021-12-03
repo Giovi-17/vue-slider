@@ -72,7 +72,13 @@ const app = new Vue(
                     this.counterActiveImg = this.slides.length - 1;
                 }
 
-            }
+            },
+
+            zoomImg: function(index) {
+
+                this.counterActiveImg = index;
+
+            },
 
         }
         
