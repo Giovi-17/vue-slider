@@ -80,7 +80,22 @@ const app = new Vue(
 
             },
 
-        }
+            cronoAdd: function() {
+
+                setInterval(() => {
+
+                    this.buttonNext();
+
+                }, 3000);
+
+            },
+
+
+        },
+        created: function(){
+            this.cronoAdd();
+            
+        },
         
     }
     
